@@ -1,0 +1,30 @@
+<!--<div class="background-line"></div>-->
+
+<div class="nav container">
+  <a class="blog-name" href="{{ site.url }}">{{ site.title }}</a>
+  <ul class="menu">
+    <a class="post-icon" href="{{ site.url }}posts"><i class="icon-list-bullet"></i></a>
+    <!--<a class="tags-icon" href="{{ site.url}}/tags"><i class="icon-tags"></i></a>-->
+    <a class="gallery-icon" href="{{ site.url }}gallery"><i class="icon-video"></i></a>
+    <a class="about-icon" href="{{ site.url }}about"><i class="icon-user"></i></a>
+  </ul>
+  <div class="clear"></div>
+</div>
+
+{% if page.img %}
+<div class="header header-top container shadow cover" style="background-image: url({{site.url}}{{page.img}});"></div>
+
+{% elsif page.attr == 'home' %}
+<!-- <div class="header container shadow index-header">
+</div> -->
+
+<div class="header-top container"></div>
+{% elsif page.attr == 'posts' %}
+<div class="header-top container"></div>
+{% else %}
+<div class="header-top container"></div>
+<!-- <div class="header header-top container shadow"> -->
+  <!--<div class="header-overlay"></div>-->
+<!-- </div> -->
+{% endif %}
+

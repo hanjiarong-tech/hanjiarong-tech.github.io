@@ -1,0 +1,40 @@
+---
+layout: default
+attr: posts
+title: Posts
+---
+
+<div class="post-list">
+
+
+    <!--<div class="wrapper-square-outer container shadow">-->
+        <!--<div class="wrapper-square-inner"></div>-->
+    <!--</div>-->
+
+    {% for post in site.posts %}
+
+    <div class="wrapper-full shadow post-cell" onclick="location.href='{{post.url}}';">
+
+        <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+        <p class="post-date">{{ post.date | date: "%Y.%m.%d" }}</p>
+
+        {% if post.img %}
+        <div class="post-image cover" style="background-image: url({{site.url}}{{post.img}});"></div>
+        {% endif %}
+
+        <div class="post-summary">
+            {% if post.content contains "<!-- more -->" %}
+            {{ post.content | split:"<!-- more -->" | first }}
+            {% else %}
+            {{ post.content | strip_html | truncatewords:100 }}
+            {% endif %}
+        </div>
+        <div class="post-tag">{{ post.category }}</div>
+        <div class="post-more">
+            <a href="{{ post.url }}">More.</a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
