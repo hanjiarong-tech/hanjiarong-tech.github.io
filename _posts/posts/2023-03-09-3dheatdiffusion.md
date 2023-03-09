@@ -14,10 +14,7 @@ MATLAB实现室内三维热传导
 
 
 <!-- more -->
-
-<!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Random tiling floor shader!<a href="https://twitter.com/hashtag/unity3d?src=hash&amp;ref_src=twsrc%5Etfw">#unity3d</a> <a href="https://t.co/ib7w09DdVF">pic.twitter.com/ib7w09DdVF</a></p>&mdash; Sorumi (@sorumi33) <a href="https://twitter.com/sorumi33/status/1543953380027969538?ref_src=twsrc%5Etfw">July 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-
-## 🌞三维热传导方程
+## 三维热传导方程
 热传导方程也称为扩散方程，除了描述固体内热传导过程，也可以刻画分子、气体的扩散。
 首先在空间取直角坐标系，取 n 个点在 t 时刻的温度 u=u(t,x,y,z)为热运动的表征量。
 在介质内任取空间微元 dV=[x,x+dx]\*[y,y+dy]\*[z,z+dz]，查看微元 dV 在时间间隔[t,t+dt]内的温度变化，根据热量守恒定律，物体温度升高所需热量等于外部流入热量和内部的热源产生热量之和。而热量的流动遵循傅里叶热传导定律：热量从温度高处向低处，沿某方向流动热量的多少与温度在该方向减少率成比例，其数学表示式为
@@ -26,7 +23,7 @@ c 表示物体材质比热容，单位是 J/(kg·K)，ρ表示物体材质密度
 通过有限差分法，上式可转化为有利于求解的离散形式：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e6560e32e3fe45049976c9b751422ae8.png)
 热传导方程本质上是偏微分方程，在采用差分离散化空间变量后转换为时间变量的常微分方程采用 Euler 法求解，相当于将偏微分方程转化为线性代数方程组，再通过向前 Euler 法迭代求出每一时刻的温度值，为下一节利用 MATLAB 进行仿真设置基础。
-## 🌞基于有限差分法的三维热传导数值仿真
+## 基于有限差分法的三维热传导数值仿真
 在进行热传导求解之前，要先设定室内空气三维热传导的仿真条件。
 （1）设置室内在固定位置恒定功率P的采暖设备的热源项为f=P/cρ。边界条件设置为绝热边界条件，即没有热量可以从边界流出，边界温度等于内部相邻节点温度，也不受到外界环境温度的影响，只与室内热源相关。
 注：如果边界处有受迫对流，f+=h(T0-Ta)，其中 h 是表面热传导系数，T0是边界处的温度，Ta是外界空气的温度。
