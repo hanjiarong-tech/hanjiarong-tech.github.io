@@ -16,7 +16,7 @@ MATLAB实现室内三维热传导
 在介质内任取空间微元 dV=[x,x+dx]\*[y,y+dy]\*[z,z+dz]，查看微元 dV 在时间间隔[t,t+dt]内的温度变化，根据热量守恒定律，物体温度升高所需热量等于外部流入热量和内部的热源产生热量之和。而热量的流动遵循傅里叶热传导定律：热量从温度高处向低处，沿某方向流动热量的多少与温度在该方向减少率成比例，其数学表示式为  
 <!-- [![gem_reflection](../../images/post/gemshader/gem_reflection.png){:width="400"}](../../images/post/gemshader/gem_reflection.png){:target="_blank"} -->
 ![数学表达式](https://img-blog.csdnimg.cn/bad14eb5bc2d4e719e27e4e9bf521ad3.png "数学表达式")
-[![数学表达式](https://img-blog.csdnimg.cn/bad14eb5bc2d4e719e27e4e9bf521ad3.png){:width="400"}] 
+<!-- [![数学表达式](https://img-blog.csdnimg.cn/bad14eb5bc2d4e719e27e4e9bf521ad3.png){:width="400"}]  -->
 c 表示物体材质比热容，单位是 J/(kg·K)，ρ表示物体材质密度，单位是 kg/m^3 。f(t,x,y,z)=g(t,x,y,z)/cρ，g(t,x,y,z)表示热源强度，即单位时间内从单位体积内放出的热量。   
 通过有限差分法，上式可转化为有利于求解的离散形式：  
 ![](https://img-blog.csdnimg.cn/e6560e32e3fe45049976c9b751422ae8.png)  
