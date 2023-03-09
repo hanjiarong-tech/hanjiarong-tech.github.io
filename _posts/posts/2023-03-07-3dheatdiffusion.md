@@ -1,15 +1,13 @@
 ---
 layout: post
 title: "MATLAB实现室内三维热传导"
-date: 2023-03-09 15:28:47
+date: 2023-03-07 15:28:47
 category: matlab
-img: images/post/3dheatdiffusion.png
+<!-- img: images/post/3dheatdiffusion.png -->
 published: true
 comments: true
 ---
 MATLAB实现室内三维热传导
-
-
 
 <!-- more -->
 ## 三维热传导方程
@@ -32,4 +30,6 @@ c 表示物体材质比热容，单位是 J/(kg·K)，ρ表示物体材质密度
 添加colorbar和caxis([Tmin,Tmax])通过求出过程中的温度最小值和最大值，指定插值面着色以使切片着色，规定温度范围内的颜色样条查看温度分布。然后，使用流线图来描绘温度的流场。  
 在室外通风的热源模式下还需要通过streamslice(x,y,z,vx,vy,vz,startx,starty,startz)绘制在室内表面绘制温度流线图，变量分别代表x网格点，y网格点，z网格点，温度在x方向梯度，温度在y方向梯度，温度在z方向梯度，x起始点，y方向起始点，z方向起始点。  
 通过streamline()函数绘制开窗通风后的室内空间温度流线，查看温度的流向。  
+
+
 
