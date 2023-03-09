@@ -3,7 +3,7 @@ layout: post
 title: "MATLAB实现室内三维热传导"
 date: 2023-03-07 15:28:47
 category: matlab
-<!-- img: images/post/3dheatdiffusion.png -->
+img: images/post/3dheatdiffusion.png
 published: true
 comments: true
 ---
@@ -14,10 +14,11 @@ MATLAB实现室内三维热传导
 热传导方程也称为扩散方程，除了描述固体内热传导过程，也可以刻画分子、气体的扩散。  
 首先在空间取直角坐标系，取 n 个点在 t 时刻的温度 u=u(t,x,y,z)为热运动的表征量。  
 在介质内任取空间微元 dV=[x,x+dx]\*[y,y+dy]\*[z,z+dz]，查看微元 dV 在时间间隔[t,t+dt]内的温度变化，根据热量守恒定律，物体温度升高所需热量等于外部流入热量和内部的热源产生热量之和。而热量的流动遵循傅里叶热传导定律：热量从温度高处向低处，沿某方向流动热量的多少与温度在该方向减少率成比例，其数学表示式为  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bad14eb5bc2d4e719e27e4e9bf521ad3.png)  
+[![gem_reflection](../../images/post/gemshader/gem_reflection.png){:width="400"}](../../images/post/gemshader/gem_reflection.png){:target="_blank"}
+[![数学表达式](https://img-blog.csdnimg.cn/bad14eb5bc2d4e719e27e4e9bf521ad3.png){:width="400"}] 
 c 表示物体材质比热容，单位是 J/(kg·K)，ρ表示物体材质密度，单位是 kg/m^3 。f(t,x,y,z)=g(t,x,y,z)/cρ，g(t,x,y,z)表示热源强度，即单位时间内从单位体积内放出的热量。   
 通过有限差分法，上式可转化为有利于求解的离散形式：  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e6560e32e3fe45049976c9b751422ae8.png)  
+![](https://img-blog.csdnimg.cn/e6560e32e3fe45049976c9b751422ae8.png)  
 热传导方程本质上是偏微分方程，在采用差分离散化空间变量后转换为时间变量的常微分方程采用 Euler 法求解，相当于将偏微分方程转化为线性代数方程组，再通过向前 Euler 法迭代求出每一时刻的温度值，为下一节利用 MATLAB 进行仿真设置基础。  
 ## 基于有限差分法的三维热传导数值仿真  
 在进行热传导求解之前，要先设定室内空气三维热传导的仿真条件。  
