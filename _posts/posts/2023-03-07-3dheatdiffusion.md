@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MATLAB实现室内三维热传导"
-date: 2023-03-09 15:28:47
+date: 2023-03-07 15:28:47
 category: matlab
 img: images/post/3dheatdiffusion.png
 published: true
