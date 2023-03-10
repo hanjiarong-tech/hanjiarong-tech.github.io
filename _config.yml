@@ -20,10 +20,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "/" # the base hostname & protocol for your site
 twitter_username: sorumi33
-github_username: Sorumi
+github_username: hanjiarong-tech
 tumblr_username: sorumi33
-weibo_username: 卟略略略略略略
-weibo_url: https://weibo.com/u/5354442981
+weibo_username: SpadeTrois
+weibo_url: https://weibo.com/u/3165063611
 
 permalink: /posts/:title/
 
