@@ -36,8 +36,8 @@ function galleryPhotoControl(){
 
     for ( var i = 0; i < photos.length; i++){
 
-        var photoPath = "url(../images/photo/"+photos[i].name+".jpg)";
-        var imgPath = "../images/photo/"+photos[i].name+".jpg";
+        var photoPath = "url(../images/photo/"+photos[i].name+".png)";
+        var imgPath = "../images/photo/"+photos[i].name+".png";
 
         var photoBorder = document.createElement("a");
         photoBorder.setAttribute("href", imgPath);
