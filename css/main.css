@@ -371,7 +371,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     transition: .3s;
 }
 .gallery .photo:hover {
