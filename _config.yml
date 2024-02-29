@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: hanjiarong-tech.github.io
-email: hanjiarong75@gmail.com
+email: 2018213326@bupt.edu.cn
 description: > # this means to ignore newlines until "baseurl:"
   hanjiarong's Blog
 baseurl: "/" # the subpath of your site, e.g. /blog
@@ -22,9 +22,8 @@ url: "/" # the base hostname & protocol for your site
 twitter_username: hanjiarong75
 github_username: hanjiarong-tech
 tumblr_username: hanjiarong75
-weibo_username: SpadeTrois
-weibo_url: https://weibo.com/u/3165063611
-
+# weibo_username: mSpadeTrois
+# weibo_url: https://weibo.com/u/m3165063611
 permalink: /posts/:title/
 
 # Build settings
