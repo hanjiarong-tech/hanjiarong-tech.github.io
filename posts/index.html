@@ -18,9 +18,9 @@ title: Posts
         <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
         <p class="post-date">{{ post.date | date: "%Y.%m.%d" }}</p>
 
-        {% if post.img %}
+        <!-- {% if post.img %}
         <div class="post-image cover" style="background-image: url({{site.url}}{{post.img}});"></div>
-        {% endif %}
+        {% endif %} -->
 
         <div class="post-summary">
             {% if post.content contains "<!-- more -->" %}
