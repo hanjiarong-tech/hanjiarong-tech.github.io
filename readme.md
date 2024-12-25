@@ -1,0 +1,14 @@
+# 个人博客
+- github地址： [https://github.com/hanjiarong-tech/hanjiarong-tech.github.io]("https://github.com/hanjiarong-tech/hanjiarong-tech.github.io")
+- github克隆地址：E:\hanjiarong\ [hanjiarong-tech.github.io]("http://hanjiarong-tech.github.io/")
+- 本地编辑地址：E:\ [hanjiarong-tech.github.io]("http://hanjiarong-tech.github.io/")
+    - 本地编译查看_site
+        - 先删掉gem的lock文件
+        - 输入命令jekyll build
+        - 在_site中查看编译好的
+        - 一点点jekyll [(4条消息) 如何快速搭建自己的github.io博客_窗外蟋蟀的博客-CSDN博客]("https://blog.csdn.net/Walkerhau/article/details/77394659")
+- 在本地部署和github区别
+    - 本地修改_config.yml中的url为../../ 不同页面改的内容不相同
+    - github上为/
+- 流程，在本地尝试编译查看然后提交
+- 如果提交中包含大文件无法提交可以删掉然后git reset
