@@ -382,11 +382,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: .3s;
+    transition: transform 0.3s cubic-bezier(0.01, 0.33, 0.58, 1.02);
 }
 .gallery .photo:hover {
-    background-size: 105%;
-    transition: .3s;
+    transform: scale(1.1);
 }
 
 
